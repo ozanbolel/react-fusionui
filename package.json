@@ -1,0 +1,25 @@
+{
+  "name": "react-fusionui",
+  "version": "0.1.0",
+  "description": "Nuclear power-up for your UI.",
+  "author": "ozanbolel",
+  "license": "MIT",
+  "main": "dist",
+  "scripts": {
+    "start": "concurrently \"npm run watch\" \"npm run dev\"",
+    "watch": "tsc --w",
+    "dev": "cd docs && npm run start",
+    "build": "tsc"
+  },
+  "peerDependencies": {
+    "react": "^16.8.0",
+    "framer-motion": "^1.11.1"
+  },
+  "devDependencies": {
+    "@types/react": "file:docs/node_modules/@types/react",
+    "concurrently": "^5.2.0",
+    "framer-motion": "^1.11.1",
+    "react": "file:docs/node_modules/react",
+    "typescript": "^3.9.6"
+  }
+}
