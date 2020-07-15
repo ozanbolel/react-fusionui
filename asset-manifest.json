@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/react-fusionui/static/css/main.16f4101a.chunk.css",
+    "main.js": "/react-fusionui/static/js/main.0c3cf99d.chunk.js",
+    "main.js.map": "/react-fusionui/static/js/main.0c3cf99d.chunk.js.map",
+    "runtime-main.js": "/react-fusionui/static/js/runtime-main.28a266b7.js",
+    "runtime-main.js.map": "/react-fusionui/static/js/runtime-main.28a266b7.js.map",
+    "static/js/2.646916e6.chunk.js": "/react-fusionui/static/js/2.646916e6.chunk.js",
+    "static/js/2.646916e6.chunk.js.map": "/react-fusionui/static/js/2.646916e6.chunk.js.map",
+    "index.html": "/react-fusionui/index.html",
+    "precache-manifest.016907e4e6fa3a810eb9226dc54ee929.js": "/react-fusionui/precache-manifest.016907e4e6fa3a810eb9226dc54ee929.js",
+    "service-worker.js": "/react-fusionui/service-worker.js",
+    "static/css/main.16f4101a.chunk.css.map": "/react-fusionui/static/css/main.16f4101a.chunk.css.map",
+    "static/js/2.646916e6.chunk.js.LICENSE.txt": "/react-fusionui/static/js/2.646916e6.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.28a266b7.js",
+    "static/js/2.646916e6.chunk.js",
+    "static/css/main.16f4101a.chunk.css",
+    "static/js/main.0c3cf99d.chunk.js"
+  ]
+}
