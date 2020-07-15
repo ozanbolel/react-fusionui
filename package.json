@@ -1,16 +1,20 @@
 {
   "name": "react-fusionui",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Nuclear power-up for your UI.",
   "author": "ozanbolel",
   "license": "MIT",
-  "main": "dist",
+  "main": "lib",
+  "files": [
+    "lib/**.*"
+  ],
   "scripts": {
     "start": "concurrently \"npm run watch\" \"npm run dev\"",
     "watch": "tsc --w",
     "dev": "cd docs && npm run start",
     "build": "tsc",
-    "deploy": "cd docs && npm run deploy"
+    "deploy": "cd docs && npm run deploy",
+    "publish:npm": "npm run build && npm publish"
   },
   "peerDependencies": {
     "react": "^16.8.0",
