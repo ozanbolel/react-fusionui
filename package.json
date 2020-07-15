@@ -1,12 +1,12 @@
 {
   "name": "react-fusionui",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Nuclear power-up for your UI.",
   "author": "ozanbolel",
   "license": "MIT",
   "main": "lib",
   "files": [
-    "lib/**.*"
+    "lib"
   ],
   "scripts": {
     "start": "concurrently \"npm run watch\" \"npm run dev\"",
