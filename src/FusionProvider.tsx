@@ -3,7 +3,9 @@ import { IState, IAction, IFusionContext, ActionType, IFusionContainerProps } fr
 
 let initialState: IState = {
   modals: [],
-  modalClassNames: undefined
+  dialogs: [],
+  modalClassNames: undefined,
+  dialogClassNames: undefined
 };
 
 function reducer(state: IState, action: IAction) {
@@ -18,6 +20,16 @@ function reducer(state: IState, action: IAction) {
         modals: state.modals.filter((modal) => modal.id !== action.payload)
       });
 
+    case ActionType.ADD_DIALOG:
+      return Object.assign({}, state, {
+        dialogs: [...state.dialogs, action.payload]
+      });
+
+    case ActionType.REMOVE_DIALOG:
+      return Object.assign({}, state, {
+        dialogs: state.dialogs.filter((dialog) => dialog.id !== action.payload)
+      });
+
     default:
       return state;
   }
@@ -25,8 +37,9 @@ function reducer(state: IState, action: IAction) {
 
 export const FusionContext = React.createContext({} as IFusionContext);
 
-export const FusionProvider: React.FC<IFusionContainerProps> = ({ children, modalClassNames }) => {
+export const FusionProvider: React.FC<IFusionContainerProps> = ({ children, modalClassNames, dialogClassNames }) => {
   initialState.modalClassNames = modalClassNames;
+  initialState.dialogClassNames = dialogClassNames;
 
   const [state, dispatch] = React.useReducer(reducer, initialState);
 

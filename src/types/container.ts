@@ -1,8 +1,7 @@
-export interface IFusionContainerModalClassNames {
-  container?: string;
-  modal?: string;
-}
+import { IModalClassNames } from "./modal";
+import { IDialogClassNames } from "./dialog";
 
 export interface IFusionContainerProps {
-  modalClassNames?: IFusionContainerModalClassNames;
+  modalClassNames?: IModalClassNames;
+  dialogClassNames?: IDialogClassNames;
 }

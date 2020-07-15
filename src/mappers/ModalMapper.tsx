@@ -4,13 +4,11 @@ import { AnimatePresence } from "framer-motion";
 import { Modal } from "../elements";
 
 export const ModalMapper: React.FC = () => {
-  const {
-    state: { modals }
-  } = useFusionContext();
+  const { state } = useFusionContext();
 
   return (
     <AnimatePresence>
-      {modals.map((modal) => (
+      {state.modals.map((modal) => (
         <Modal key={modal.id} id={modal.id} Component={modal.Component} config={modal.config} />
       ))}
     </AnimatePresence>

@@ -32,3 +32,21 @@ body {
   background: #fff;
   padding: 20px;
 }
+
+/* Dialog */
+
+.dialogContainer {
+  background: rgba(0, 0, 0, 0.15);
+}
+
+.dialog {
+  background: #fff;
+}
+
+.dialogContent {
+  padding: 20px;
+}
+
+.dialogAction {
+  width: 100%;
+}

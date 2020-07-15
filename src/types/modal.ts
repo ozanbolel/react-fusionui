@@ -1,5 +1,10 @@
 import * as React from "react";
 
+export interface IModalClassNames {
+  container?: string;
+  modal?: string;
+}
+
 export interface IModalComponentProps {
   closeModal: Function;
   isAnimationDone: boolean;
