@@ -9,7 +9,8 @@
     "start": "concurrently \"npm run watch\" \"npm run dev\"",
     "watch": "tsc --w",
     "dev": "cd docs && npm run start",
-    "build": "tsc"
+    "build": "tsc",
+    "deploy": "cd docs && npm run deploy"
   },
   "peerDependencies": {
     "react": "^16.8.0",
