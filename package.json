@@ -11,20 +11,23 @@
   "scripts": {
     "start": "concurrently \"npm run watch\" \"npm run dev\"",
     "watch": "tsc --w",
-    "dev": "cd docs && npm run start",
+    "dev": "cd demo && npm run start",
     "build": "tsc",
-    "deploy": "cd docs && npm run deploy",
+    "deploy": "cd demo && npm run deploy",
     "publish:npm": "npm run build && npm publish"
   },
   "peerDependencies": {
     "react": "^16.8.0",
+    "react-dom": "^16.8.0"
+  },
+  "dependencies": {
     "framer-motion": "^1.11.1"
   },
   "devDependencies": {
-    "@types/react": "file:docs/node_modules/@types/react",
+    "@types/react": "file:demo/node_modules/@types/react",
     "concurrently": "^5.2.0",
-    "framer-motion": "^1.11.1",
-    "react": "file:docs/node_modules/react",
+    "react": "file:demo/node_modules/react",
+    "react-dom": "file:demo/node_modules/react-dom",
     "typescript": "^3.9.6"
   }
 }

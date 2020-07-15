@@ -7,9 +7,20 @@ const Modal: FusionModalComponent<{ text?: string }> = ({ text }) => {
 };
 
 const Home: React.FC = () => {
+  const [text, setText] = React.useState("Hello!");
   const modal = useModal();
 
-  return <h3 onClick={() => modal(Modal, { autoclose: true, props: { text: "Hello!" } })}>Open Modal</h3>;
+  const openModal = () => modal(Modal, { props: { text }, autoclose: true });
+
+  React.useEffect(() => {
+    openModal();
+
+    setTimeout(() => {
+      setText("Hellooo!!!!");
+    }, 400);
+  }, []);
+
+  return <h3 onClick={() => openModal()}>{text}</h3>;
 };
 
 export default function App() {

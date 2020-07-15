@@ -1,6 +1,7 @@
 import * as React from "react";
-import { Modal } from "../elements";
 import { useFusionContext } from "../utils";
+import { AnimatePresence } from "framer-motion";
+import { Modal } from "../elements";
 
 export const ModalMapper: React.FC = () => {
   const {
@@ -8,10 +9,10 @@ export const ModalMapper: React.FC = () => {
   } = useFusionContext();
 
   return (
-    <>
+    <AnimatePresence>
       {modals.map((modal) => (
-        <Modal key={modal.id} id={modal.id} component={modal.component} config={modal.config} />
+        <Modal key={modal.id} id={modal.id} Component={modal.Component} config={modal.config} />
       ))}
-    </>
+    </AnimatePresence>
   );
 };

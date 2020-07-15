@@ -15,6 +15,6 @@ export interface IModalConfig {
 
 export interface IModalObject {
   id: string;
-  component: ModalComponent;
+  Component: ModalComponent;
   config?: IModalConfig;
 }
