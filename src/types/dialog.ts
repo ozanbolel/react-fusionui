@@ -20,7 +20,7 @@ export interface IDialogConfig {
 
 export interface IDialogObject {
   id: string;
-  content: string | React.ReactNode;
+  content: React.ReactNode;
   actions: IDialogAction[];
   config?: IDialogConfig;
 }

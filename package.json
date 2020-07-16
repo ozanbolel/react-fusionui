@@ -1,9 +1,17 @@
 {
   "name": "react-fusionui",
-  "version": "0.1.2",
+  "version": "0.1.4",
   "description": "Nuclear power-up for your UI.",
   "author": "ozanbolel",
   "license": "MIT",
+  "repository": "https://github.com/ozanbolel/react-fusionui",
+  "keywords": [
+    "react",
+    "hooks",
+    "react-component",
+    "modal",
+    "dialog"
+  ],
   "main": "lib",
   "files": [
     "lib"
