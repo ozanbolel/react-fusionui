@@ -87,11 +87,11 @@ export default function App() {
 
 #### Args
 
-| Arg           | Description                                                    |   Type    | Required |
-| ------------- | -------------------------------------------------------------- | :-------: | :------: |
-| **`content`** | Props of the component. Must be: `props={ this.props }`        | ReactNode |   YES    |
-| **`actions`** | The path to link to.                                           |   Array   |   YES    |
-| **`config`**  | Name of the animation. Valid values: `fade` , `slide` , `zoom` |  Object   |          |
+| Arg           | Description                                |   Type    | Required |
+| ------------- | ------------------------------------------ | :-------: | :------: |
+| **`content`** | Content of the dialog.                     | ReactNode |   YES    |
+| **`actions`** | Actions which will be rendered as buttons. |   Array   |   YES    |
+| **`config`**  | Dialog configuration.                      |  Object   |          |
 
 #### Action
 
