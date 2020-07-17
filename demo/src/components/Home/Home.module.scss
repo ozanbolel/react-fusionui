@@ -1,0 +1,22 @@
+@import "../../styles/head";
+
+.header {
+  background: $c-main;
+  color: $c-dark;
+  padding: $g-xxl $g-s;
+  text-align: center;
+}
+
+.title {
+  font-size: $h3;
+  font-weight: $b;
+  margin-bottom: $g-xs;
+}
+
+.desc {
+  font-size: $h5;
+}
+
+.bold {
+  font-weight: $b;
+}

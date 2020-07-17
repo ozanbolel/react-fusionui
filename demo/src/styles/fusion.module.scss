@@ -1,0 +1,51 @@
+@import "./head.scss";
+
+// Common
+
+.container {
+  background: rgba($c-dark, 0.15);
+}
+
+// Modal
+
+.modal {
+  background: $c-light;
+  padding: $g-m;
+  border-radius: $r;
+  box-shadow: $s-box;
+  overflow: hidden;
+}
+
+// Dialog
+
+.dialog {
+  width: 220px;
+  background: $c-light;
+  border-radius: $r;
+  box-shadow: $s-box;
+  overflow: hidden;
+}
+
+.content {
+  padding: $g-m;
+  text-align: center;
+}
+
+.actionContainer {
+  display: flex;
+  border-top: solid 1px $c-divider;
+}
+
+.action {
+  flex: 1;
+  padding: $g-xs 0;
+  border-right: solid 1px $c-divider;
+
+  &:last-of-type {
+    border-right: none;
+  }
+}
+
+.actionLabel {
+  font-weight: $b;
+}

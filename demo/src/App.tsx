@@ -1,34 +1,28 @@
 import * as React from "react";
-import { FusionContainer, useModal, FusionModalComponent, useDialog } from "react-fusionui";
-import css from "./App.module.css";
+import { FusionContainer } from "react-fusionui";
+import Home from "./components/Home/Home";
+import "./styles/app.scss";
+import css from "./styles/fusion.module.scss";
 
-const Modal: FusionModalComponent = () => {
-  const dialog = useDialog();
-
-  return <button onClick={() => dialog("Hello!", [{ label: "Ok" }, { label: "Cancel" }])}>Open Dialog</button>;
-};
-
-const Home: React.FC = () => {
-  const modal = useModal();
-
-  return <button onClick={() => modal(Modal, { autoclose: true })}>Open Modal</button>;
-};
-
-export default function App() {
+const App: React.FC = () => {
   return (
     <FusionContainer
       modalClassNames={{
-        container: css.modalContainer,
+        container: css.container,
         modal: css.modal
       }}
       dialogClassNames={{
-        container: css.dialogContainer,
+        container: css.container,
         dialog: css.dialog,
-        content: css.dialogContent,
-        action: css.dialogAction
+        content: css.content,
+        actionContainer: css.actionContainer,
+        action: css.action,
+        actionLabel: css.actionLabel
       }}
     >
       <Home />
     </FusionContainer>
   );
-}
+};
+
+export default App;

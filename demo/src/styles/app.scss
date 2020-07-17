@@ -1,0 +1,13 @@
+@import "./head";
+@import "./reset";
+
+html {
+  font-family: $f;
+  font-size: $f-s;
+}
+
+body {
+  background: $c-light;
+  color: $c-dark;
+  overflow-x: hidden;
+}

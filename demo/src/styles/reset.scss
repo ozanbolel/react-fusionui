@@ -1,0 +1,59 @@
+* {
+  margin: 0;
+  padding: 0;
+  word-break: break-word;
+  word-wrap: break-word;
+  -webkit-touch-callout: none;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+html,
+body,
+body > div {
+  height: 100%;
+}
+
+a {
+  color: unset;
+  text-decoration: none;
+  -webkit-user-drag: none;
+}
+
+button {
+  font: unset;
+  background: unset;
+  color: unset;
+  border: none;
+  cursor: pointer;
+}
+
+input {
+  font: unset;
+  background: unset;
+  color: unset;
+  border: none;
+
+  &::placeholder {
+    color: inherit;
+  }
+}
+
+iframe {
+  border: none;
+}
+
+select {
+  font: unset;
+  border: none;
+  appearance: none;
+}
+
+option {
+  font: unset;
+}

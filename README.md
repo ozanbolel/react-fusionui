@@ -1,13 +1,17 @@
-# react-fusionui
+# React FusionUI ☢️
 
-> Nuclear power-up for your UI.
+[![npm](https://img.shields.io/npm/v/react-fusionui.svg)](https://www.npmjs.com/package/react-fusionui) [![npm downloads](https://img.shields.io/npm/dt/react-fusionui.svg)](https://www.npmjs.com/package/react-fusionui)
 
-[![npm](https://img.shields.io/npm/v/react-fusionui.svg)](https://www.npmjs.com/package/react-fusionui) [![npm downloads](https://img.shields.io/npm/dt/react-fusionui.svg)](https://www.npmjs.com/package/react-fusionui) ![last commit](https://img.shields.io/github/last-commit/ozanbolel/react-fusionui.svg)
+> Open modals and dialogs with ease! 🚀 FusionUI is an **unopinionated** and minimalist library to power-up your UI.
 
 ## **Installation**
 
 ```bash
 npm i react-fusionui
+```
+
+```bash
+yarn add react-fusionui
 ```
 
 ## **Basic Usage**
@@ -36,9 +40,10 @@ export default function App() {
 ```
 
 > You need to wrap your app within `FusionContainer`.
+
 > FusionUI passes `isAnimationDone`, `isClosing` and `closeModal` props to your modal component.
 
-## **Styling**
+## **Styling Example**
 
 ```jsx
 import React from "react";
@@ -49,14 +54,16 @@ export default function App() {
   return (
     <FusionContainer
       modalClassNames={{
-        container: css.modalContainer,
+        container: css.container,
         modal: css.modal
       }}
       dialogClassNames={{
-        container: css.dialogContainer,
+        container: css.container,
         dialog: css.dialog,
-        content: css.dialogContent,
-        action: css.dialogAction
+        content: css.content,
+        actionContainer: css.actionContainer,
+        action: css.action,
+        actionLabel: css.actionLabel
       }}
     >
       <Home />
@@ -67,25 +74,25 @@ export default function App() {
 
 ## **Hooks**
 
-### **useModal**
+## **useModal**
 
-#### Args
+##### Args
 
-| Arg             | Description                                    |         Type         | Required |
-| --------------- | ---------------------------------------------- | :------------------: | :------: |
-| **`Component`** | Component you want to render inside the modal. | Functional Component |   YES    |
-| **`config`**    | Modal configuration.                           |        Object        |          |
+| Arg             | Description                                    |        Type         | Required |
+| --------------- | ---------------------------------------------- | :-----------------: | :------: |
+| **`Component`** | Component you want to render inside the modal. | FunctionalComponent |   YES    |
+| **`config`**    | Modal configuration.                           |       Object        |          |
 
-#### Config
+##### Config Object
 
 | Name            | Description                                                         |  Type   | Required |
 | --------------- | ------------------------------------------------------------------- | :-----: | :------: |
 | **`props`**     | Props you want to pass to the component you specified.              | Object  |          |
 | **`autoclose`** | Should your component close when user clicks outside of your modal. | Boolean |          |
 
-### **useDialog**
+## **useDialog**
 
-#### Args
+##### Args
 
 | Arg           | Description                                |   Type    | Required |
 | ------------- | ------------------------------------------ | :-------: | :------: |
@@ -93,14 +100,14 @@ export default function App() {
 | **`actions`** | Actions which will be rendered as buttons. |   Array   |   YES    |
 | **`config`**  | Dialog configuration.                      |  Object   |          |
 
-#### Action
+##### Action Object
 
 | Name           | Description                          |   Type   | Required |
 | -------------- | ------------------------------------ | :------: | :------: |
 | **`label`**    | Label of the button.                 |  String  |   YES    |
 | **`callback`** | Will run when the button is clicked. | Function |          |
 
-#### Config
+##### Config Object
 
 | Name            | Description                                                     |  Type   | Required |
 | --------------- | --------------------------------------------------------------- | :-----: | :------: |
