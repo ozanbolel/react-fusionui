@@ -10,13 +10,14 @@
 }
 
 .title {
-  font-size: $h3;
+  font-size: $h2;
   font-weight: $b;
   margin-bottom: $g-xs;
 }
 
 .desc {
-  font-size: $h5;
+  font-size: $h4;
+  line-height: $h4 * 1.5;
 }
 
 .bold {

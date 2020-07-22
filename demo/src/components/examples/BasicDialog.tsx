@@ -13,13 +13,13 @@ const BasicDialog: React.FC = () => {
   const MyComponent = () => {
     const dialog = useDialog();
 
-    return <button onClick={() => dialog("Hello!", [{ label: "Bye." }])}>Open Dialog</button>;
+    return <button onClick={() => dialog("Hi there!", [{ label: "Bye." }])}>Open Dialog</button>;
   };
 
   export default MyComponent;
   `;
 
-  const preview = <button onClick={() => dialog("Hello!", [{ label: "Bye." }])}>Open Dialog</button>;
+  const preview = <button onClick={() => dialog("Hi there!", [{ label: "Bye." }])}>Open Dialog</button>;
 
   return (
     <Section title="Basic Dialog">

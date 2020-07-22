@@ -1,10 +1,13 @@
 @import "../../../styles/head";
 
 .footer {
-  font-size: $h4;
-  font-weight: $b;
+  font-size: $h3;
   text-align: center;
-  margin: $g-xl 0 $g-l 0;
+  margin: $g-l 0;
+
+  .bold {
+    font-weight: $b;
+  }
 
   a {
     border-bottom: solid 1px transparent;

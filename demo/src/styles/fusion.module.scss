@@ -19,7 +19,7 @@
 // Dialog
 
 .dialog {
-  width: 220px;
+  width: 230px;
   background: $c-light;
   border-radius: $r;
   box-shadow: $s-modal;
@@ -38,7 +38,7 @@
 
 .action {
   flex: 1;
-  padding: $g-xs 0;
+  padding: $g-s 0;
   border-right: solid 1px $c-divider;
   transition: background $de;
 

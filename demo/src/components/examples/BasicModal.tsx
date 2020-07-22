@@ -11,7 +11,7 @@ const BasicModal: React.FC = () => {
   import { useModal } from "react-fusionui";
 
   const Modal = ({ closeModal }) => {
-    return <h1 onClick={() => closeModal()}>Click to Close</h1>;
+    return <h2 onClick={() => closeModal()}>Click to Close</h2>;
   };
 
   const MyComponent = () => {
@@ -24,7 +24,7 @@ const BasicModal: React.FC = () => {
   `;
 
   const Modal: FusionModalComponent = ({ closeModal }) => {
-    return <h1 onClick={() => closeModal()}>Click to Close</h1>;
+    return <h2 onClick={() => closeModal()}>Click to Close</h2>;
   };
 
   const preview = <button onClick={() => modal(Modal)}>Open Modal</button>;

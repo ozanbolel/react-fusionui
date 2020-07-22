@@ -9,7 +9,8 @@ const Footer: React.FC = () => {
         <span role="img" aria-label="love">
           ❤️
         </span>
-        <span> by Ozan Bolel</span>
+        <span> by </span>
+        <span className={css.bold}>Ozan Bolel</span>
       </a>
     </div>
   );

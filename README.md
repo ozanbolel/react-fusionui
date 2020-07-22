@@ -43,7 +43,7 @@ export default function App() {
 
 > FusionUI passes `isAnimationDone`, `isClosing` and `closeModal` props to your modal component.
 
-## **Demo**
+## **Demo with Examples**
 
 [ozanbolel.github.io/react-fusionui](https://ozanbolel.github.io/react-fusionui)
 

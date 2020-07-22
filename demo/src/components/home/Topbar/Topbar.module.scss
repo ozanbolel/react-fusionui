@@ -1,8 +1,23 @@
 @import "../../../styles/head";
 
 .topbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
   display: flex;
-  padding: $g-xs 0 $g-s 0;
+  background: $c-light;
+  padding: $g-xs $g-s;
+  border-bottom: solid 1px $c-divider;
+
+  &.placeholder {
+    visibility: hidden;
+    position: unset;
+    top: unset;
+    left: unset;
+    right: unset;
+    margin-bottom: $g-m;
+  }
 
   & > div {
     flex: 1;
@@ -11,29 +26,52 @@
   }
 
   .name {
-    font-size: $h4;
+    font-size: $h3;
     font-weight: $b;
+    cursor: pointer;
+
+    span[role="img"] {
+      margin-left: $g-xxs;
+    }
   }
 
   .link {
     justify-content: flex-end;
 
-    a {
+    button {
       display: flex;
       align-items: center;
-      box-sizing: border-box;
-      border-bottom: solid 1px transparent;
-      transition: border-color $de;
-      cursor: pointer;
+      background: $c-dark;
+      color: $c-light;
+      font-size: $h5;
+      font-weight: $b;
+      padding: $g-xs $g-s;
+      border-radius: $r;
 
-      &:hover {
-        border-color: $c-dark;
+      svg {
+        width: $h3;
+        margin-left: $g-xxs;
       }
     }
+  }
+}
 
-    svg {
-      margin-left: $g-xxs;
-      width: 1.2rem;
-    }
+// Responsive
+
+@media only screen and (min-width: 1024px) {
+  .topbar {
+    padding: $g-xs 5%;
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  .topbar {
+    padding: $g-xs 10%;
+  }
+}
+
+@media only screen and (min-width: 1600px) {
+  .topbar {
+    padding: $g-xs 20%;
   }
 }
