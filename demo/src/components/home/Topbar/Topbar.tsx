@@ -13,7 +13,7 @@ const Topbar: React.FC = () => {
 
       <div className={css.link}>
         <a href="https://github.com/ozanbolel/react-fusionui">
-          <span>See on GitHub</span>
+          <span>View on GitHub</span>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 24 24"

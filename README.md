@@ -1,4 +1,4 @@
-# React FusionUI ☢️
+## React FusionUI ☢️
 
 [![npm](https://img.shields.io/npm/v/react-fusionui.svg)](https://www.npmjs.com/package/react-fusionui) [![npm downloads](https://img.shields.io/npm/dt/react-fusionui.svg)](https://www.npmjs.com/package/react-fusionui)
 

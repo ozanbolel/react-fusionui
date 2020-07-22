@@ -11,6 +11,10 @@ export const FusionContainer: React.FC<IFusionContainerProps> = ({ children, mod
 
     resizeOps();
     window.addEventListener("resize", resizeOps);
+
+    return () => {
+      window.removeEventListener("resize", resizeOps);
+    };
   });
 
   return (
