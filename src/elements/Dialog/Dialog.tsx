@@ -1,7 +1,7 @@
 import * as React from "react";
-import { useFusionContext } from "../utils";
+import { useFusionContext } from "../../utils";
 import { motion } from "framer-motion";
-import { IDialogObject, ActionType } from "../types";
+import { IDialogObject, ActionType } from "../../types";
 import { containerStyles, containerVariants, dialogVariants } from "./Dialog.style";
 
 export const Dialog: React.FC<IDialogObject> = ({ id, content, actions, config }) => {
@@ -38,7 +38,11 @@ export const Dialog: React.FC<IDialogObject> = ({ id, content, actions, config }
 
         <div className={state.dialogClassNames?.actionContainer}>
           {actions.map((action, index) => (
-            <button key={id + "-" + index} className={state.dialogClassNames?.action} onClick={() => actionOnClick(action.callback)}>
+            <button
+              key={id + "-" + index}
+              className={state.dialogClassNames?.action + (state.dialogClassNames?.highlight && action.highlight ? " " + state.dialogClassNames.highlight : "")}
+              onClick={() => actionOnClick(action.callback)}
+            >
               <span className={state.dialogClassNames?.actionLabel}>{action.label}</span>
             </button>
           ))}

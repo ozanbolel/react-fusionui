@@ -1,0 +1,18 @@
+@import "../../../styles/head";
+
+.footer {
+  font-size: $h4;
+  font-weight: $b;
+  text-align: center;
+  margin: $g-xl 0 $g-l 0;
+
+  a {
+    border-bottom: solid 1px transparent;
+    transition: border-color $de;
+    cursor: pointer;
+
+    &:hover {
+      border-color: $c-dark;
+    }
+  }
+}

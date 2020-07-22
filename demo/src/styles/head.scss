@@ -18,8 +18,8 @@ $h6: 0.8rem;
 
 $c-dark: #1b262c;
 $c-light: #f9f9f9;
+$c-light-a: #f0f0f0;
 $c-main: #fff48f;
-$c-main-a: #394989;
 $c-divider: #ece8d9;
 
 // Space
@@ -34,12 +34,14 @@ $g-xxl: 100px;
 
 // Radius
 
-$r: $g-xxs;
-$r-100: $g-xxl;
+$r: 0.5rem;
+$r-100: 100rem;
 
 // Shadow
 
-$s-box: 0 $g-xxs $g-s rgba($c-dark, 0.08);
+$s-box: 0 $g-xs $g-m rgba($c-dark, 0.08);
+$s-button: 0 $g-xs $g-m rgba($c-dark, 0.08);
+$s-modal: 0 $g-s $g-m rgba($c-dark, 0.08);
 
 // Easing
 
@@ -56,12 +58,3 @@ $d-xl: 0.8s;
 $d-xxl: 1s;
 
 $de: $d $e-o;
-
-// Mixins
-
-@mixin no-select {
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}

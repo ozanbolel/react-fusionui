@@ -7,11 +7,13 @@ export interface IDialogClassNames {
   actionContainer?: string;
   action?: string;
   actionLabel?: string;
+  highlight?: string;
 }
 
 export interface IDialogAction {
   label: string;
   callback?: Function;
+  highlight?: boolean;
 }
 
 export interface IDialogConfig {

@@ -1,0 +1,39 @@
+@import "../../../styles/head";
+
+.topbar {
+  display: flex;
+  padding: $g-xs 0 $g-s 0;
+
+  & > div {
+    flex: 1;
+    display: flex;
+    align-items: center;
+  }
+
+  .name {
+    font-size: $h4;
+    font-weight: $b;
+  }
+
+  .link {
+    justify-content: flex-end;
+
+    a {
+      display: flex;
+      align-items: center;
+      box-sizing: border-box;
+      border-bottom: solid 1px transparent;
+      transition: border-color $de;
+      cursor: pointer;
+
+      &:hover {
+        border-color: $c-dark;
+      }
+    }
+
+    svg {
+      margin-left: $g-xxs;
+      width: 1.2rem;
+    }
+  }
+}

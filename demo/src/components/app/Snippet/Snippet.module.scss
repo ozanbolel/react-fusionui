@@ -1,0 +1,50 @@
+@import "../../../styles/head";
+
+.snippet {
+  display: flex;
+  flex-direction: column;
+  border-radius: $r;
+  overflow: hidden;
+
+  &.margin {
+    margin-bottom: $g-xs;
+  }
+}
+
+.code {
+  flex: 2;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+.preview {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: $c-light-a;
+  padding: $g-s 0;
+  border-radius: 0 $r $r 0;
+
+  button {
+    background: $c-main;
+    font-weight: $b;
+    padding: $g-s $g-m;
+    border-radius: $r;
+    box-shadow: $s-button;
+    transition: background $de, color $de;
+
+    &:hover {
+      background: $c-dark;
+      color: $c-light;
+    }
+  }
+}
+
+// Responsive
+
+@media only screen and (min-width: 1024px) {
+  .snippet {
+    flex-direction: row;
+  }
+}

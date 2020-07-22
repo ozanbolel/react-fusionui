@@ -1,10 +1,12 @@
-@import "../../styles/head";
+@import "../../../styles/head";
 
 .header {
   background: $c-main;
   color: $c-dark;
   padding: $g-xxl $g-s;
   text-align: center;
+  border-radius: $r;
+  margin-bottom: $g-m;
 }
 
 .title {

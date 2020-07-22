@@ -2,15 +2,15 @@
 
 [![npm](https://img.shields.io/npm/v/react-fusionui.svg)](https://www.npmjs.com/package/react-fusionui) [![npm downloads](https://img.shields.io/npm/dt/react-fusionui.svg)](https://www.npmjs.com/package/react-fusionui)
 
-> Open modals and dialogs with ease! 🚀 FusionUI is an **unopinionated** and minimalist library to power-up your UI.
+Open modals and dialogs with ease! 🚀 FusionUI is an **unopinionated** and minimalist library to power-up your UI.
 
 ## **Installation**
 
 ```bash
+# npm
 npm i react-fusionui
-```
 
-```bash
+# yarn
 yarn add react-fusionui
 ```
 
@@ -43,7 +43,11 @@ export default function App() {
 
 > FusionUI passes `isAnimationDone`, `isClosing` and `closeModal` props to your modal component.
 
-## **Styling Example**
+## **Demo**
+
+[ozanbolel.github.io/react-fusionui](https://ozanbolel.github.io/react-fusionui)
+
+## **Theming**
 
 ```jsx
 import React from "react";
@@ -63,7 +67,8 @@ export default function App() {
         content: css.content,
         actionContainer: css.actionContainer,
         action: css.action,
-        actionLabel: css.actionLabel
+        actionLabel: css.actionLabel,
+        highlight: css.highlight
       }}
     >
       <Home />
@@ -72,9 +77,9 @@ export default function App() {
 }
 ```
 
-## **Hooks**
+## **API**
 
-## **useModal**
+### **useModal**
 
 ##### Args
 
@@ -90,7 +95,7 @@ export default function App() {
 | **`props`**     | Props you want to pass to the component you specified.              | Object  |          |
 | **`autoclose`** | Should your component close when user clicks outside of your modal. | Boolean |          |
 
-## **useDialog**
+### **useDialog**
 
 ##### Args
 
@@ -102,13 +107,18 @@ export default function App() {
 
 ##### Action Object
 
-| Name           | Description                          |   Type   | Required |
-| -------------- | ------------------------------------ | :------: | :------: |
-| **`label`**    | Label of the button.                 |  String  |   YES    |
-| **`callback`** | Will run when the button is clicked. | Function |          |
+| Name            | Description                           |   Type   | Required |
+| --------------- | ------------------------------------- | :------: | :------: |
+| **`label`**     | Label of the button.                  |  String  |   YES    |
+| **`callback`**  | Will run when the button is clicked.  | Function |          |
+| **`highlight`** | Apply highlight styles to the button. | Boolean  |          |
 
 ##### Config Object
 
 | Name            | Description                                                     |  Type   | Required |
 | --------------- | --------------------------------------------------------------- | :-----: | :------: |
 | **`autoclose`** | Should the dialog close when user clicks outside of the dialog. | Boolean |          |
+
+## License
+
+[MIT](https://github.com/ozanbolel/react-fusionui/blob/master/LICENSE)

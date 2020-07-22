@@ -1,7 +1,7 @@
 import * as React from "react";
-import { useFusionContext } from "../utils";
+import { useFusionContext } from "../../utils";
 import { motion } from "framer-motion";
-import { IModalObject, ActionType } from "../types";
+import { IModalObject, ActionType } from "../../types";
 import { containerStyles, containerVariants, modalVariants } from "./Modal.style";
 
 export const Modal: React.FC<IModalObject> = ({ id, Component, config }) => {

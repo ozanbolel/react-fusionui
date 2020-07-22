@@ -1,6 +1,6 @@
 import * as React from "react";
 import { FusionContainer } from "react-fusionui";
-import Home from "./components/Home/Home";
+import Home from "./components/home/Home/Home";
 import "./styles/app.scss";
 import css from "./styles/fusion.module.scss";
 
@@ -17,7 +17,8 @@ const App: React.FC = () => {
         content: css.content,
         actionContainer: css.actionContainer,
         action: css.action,
-        actionLabel: css.actionLabel
+        actionLabel: css.actionLabel,
+        highlight: css.highlight
       }}
     >
       <Home />

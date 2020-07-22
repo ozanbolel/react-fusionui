@@ -1,0 +1,26 @@
+@import "../../../styles/head";
+
+.home {
+  height: 100%;
+  padding: 0 $g-s;
+}
+
+// Responsive
+
+@media only screen and (min-width: 1024px) {
+  .home {
+    padding: 0 5%;
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  .home {
+    padding: 0 10%;
+  }
+}
+
+@media only screen and (min-width: 1600px) {
+  .home {
+    padding: 0 20%;
+  }
+}

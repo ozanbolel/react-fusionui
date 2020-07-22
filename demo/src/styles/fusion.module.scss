@@ -12,7 +12,7 @@
   background: $c-light;
   padding: $g-m;
   border-radius: $r;
-  box-shadow: $s-box;
+  box-shadow: $s-modal;
   overflow: hidden;
 }
 
@@ -22,7 +22,7 @@
   width: 220px;
   background: $c-light;
   border-radius: $r;
-  box-shadow: $s-box;
+  box-shadow: $s-modal;
   overflow: hidden;
 }
 
@@ -40,12 +40,21 @@
   flex: 1;
   padding: $g-xs 0;
   border-right: solid 1px $c-divider;
+  transition: background $de;
 
   &:last-of-type {
     border-right: none;
+  }
+
+  &:hover {
+    background: $c-divider;
   }
 }
 
 .actionLabel {
   font-weight: $b;
+}
+
+.highlight {
+  background: $c-main;
 }
