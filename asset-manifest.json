@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/react-fusionui/static/css/main.5b2c541a.chunk.css",
-    "main.js": "/react-fusionui/static/js/main.1e6e6cdf.chunk.js",
-    "main.js.map": "/react-fusionui/static/js/main.1e6e6cdf.chunk.js.map",
+    "main.css": "/react-fusionui/static/css/main.29e0ceb8.chunk.css",
+    "main.js": "/react-fusionui/static/js/main.b1786c60.chunk.js",
+    "main.js.map": "/react-fusionui/static/js/main.b1786c60.chunk.js.map",
     "runtime-main.js": "/react-fusionui/static/js/runtime-main.6cd10318.js",
     "runtime-main.js.map": "/react-fusionui/static/js/runtime-main.6cd10318.js.map",
     "static/js/2.79108af4.chunk.js": "/react-fusionui/static/js/2.79108af4.chunk.js",
     "static/js/2.79108af4.chunk.js.map": "/react-fusionui/static/js/2.79108af4.chunk.js.map",
     "index.html": "/react-fusionui/index.html",
-    "precache-manifest.3377aa6faa82011623e7334dab1e9de1.js": "/react-fusionui/precache-manifest.3377aa6faa82011623e7334dab1e9de1.js",
+    "precache-manifest.b9a8c234858955a6699635abe627cded.js": "/react-fusionui/precache-manifest.b9a8c234858955a6699635abe627cded.js",
     "service-worker.js": "/react-fusionui/service-worker.js",
-    "static/css/main.5b2c541a.chunk.css.map": "/react-fusionui/static/css/main.5b2c541a.chunk.css.map",
+    "static/css/main.29e0ceb8.chunk.css.map": "/react-fusionui/static/css/main.29e0ceb8.chunk.css.map",
     "static/js/2.79108af4.chunk.js.LICENSE.txt": "/react-fusionui/static/js/2.79108af4.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.6cd10318.js",
     "static/js/2.79108af4.chunk.js",
-    "static/css/main.5b2c541a.chunk.css",
-    "static/js/main.1e6e6cdf.chunk.js"
+    "static/css/main.29e0ceb8.chunk.css",
+    "static/js/main.b1786c60.chunk.js"
   ]
 }

@@ -1,11 +1,11 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "536587dba72ea87dc7a09af76d713746",
+    "revision": "195f12d6f77a90d15625dc9a37d17f51",
     "url": "/react-fusionui/index.html"
   },
   {
-    "revision": "2a0b7d7e32dbee54bf70",
-    "url": "/react-fusionui/static/css/main.5b2c541a.chunk.css"
+    "revision": "e4f14ea9001db7ecd4b0",
+    "url": "/react-fusionui/static/css/main.29e0ceb8.chunk.css"
   },
   {
     "revision": "c3f4d0b4fddb844e45b1",
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/react-fusionui/static/js/2.79108af4.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "2a0b7d7e32dbee54bf70",
-    "url": "/react-fusionui/static/js/main.1e6e6cdf.chunk.js"
+    "revision": "e4f14ea9001db7ecd4b0",
+    "url": "/react-fusionui/static/js/main.b1786c60.chunk.js"
   },
   {
     "revision": "8451bd099140de66a000",
