@@ -1,23 +1,45 @@
 @import "../../../styles/head";
 
 .header {
-  background: $c-main;
+  @keyframes gradient {
+    0% {
+      background-position: 10% 0%;
+    }
+    50% {
+      background-position: 90% 100%;
+    }
+    100% {
+      background-position: 10% 0%;
+    }
+  }
+
+  background: linear-gradient(180deg, #ffb7b7 0%, #727272 100%), radial-gradient(60.91% 100% at 50% 0%, #ffd1d1 0%, #260000 100%),
+    linear-gradient(238.72deg, #ffdddd 0%, #720066 100%), linear-gradient(127.43deg, #00ffff 0%, #ff4444 100%),
+    radial-gradient(100.22% 100% at 70.57% 0%, #ff0000 0%, #00ffe0 100%), linear-gradient(127.43deg, #b7d500 0%, #3300ff 100%);
+  background-blend-mode: screen, overlay, hard-light, color-burn, color-dodge, normal;
+  background-size: 250% 250%;
   color: $c-dark;
-  padding: $g-xxl $g-m;
-  text-align: center;
   border-radius: $r;
   margin-bottom: $g-m;
+  animation: gradient 10s $e-io infinite;
+  overflow: hidden;
+  @include no-select;
+}
+
+.inner {
+  background: rgba($c-main, 0.25);
+  padding: $g-xxl $g-s;
+  text-align: center;
 }
 
 .title {
   font-size: $h2;
   font-weight: $b;
-  margin-bottom: $g-xs;
+  margin-bottom: $g-s;
 }
 
 .desc {
   font-size: $h4;
-  line-height: $h4 * 1.5;
 }
 
 .bold {

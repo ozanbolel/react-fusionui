@@ -15,6 +15,10 @@
   flex: 2;
   overflow-x: auto;
   overflow-y: hidden;
+
+  pre {
+    height: 100%;
+  }
 }
 
 .preview {
@@ -22,12 +26,14 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background: $c-light-a;
+  background: linear-gradient(-90deg, $c-light-a, $c-light);
   padding: $g-l 0;
   border-radius: 0 $r $r 0;
+  @include no-select;
 
   button {
     background: $c-main;
+    font-size: $h5;
     font-weight: $b;
     padding: $g-s $g-m;
     border-radius: $r;
@@ -36,7 +42,7 @@
 
     &:hover {
       background: $c-dark;
-      color: $c-light;
+      color: $c-main;
     }
   }
 }

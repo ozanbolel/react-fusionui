@@ -1,14 +1,17 @@
 @import "../../../styles/head";
 
 .topbar {
+  z-index: 10;
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   display: flex;
-  background: $c-light;
+  background: rgba($c-light, 0.85);
+  backdrop-filter: blur(15px);
   padding: $g-xs $g-s;
   border-bottom: solid 1px $c-divider;
+  @include no-select;
 
   &.placeholder {
     visibility: hidden;
@@ -18,45 +21,67 @@
     right: unset;
     margin-bottom: $g-m;
   }
+}
 
-  & > div {
-    flex: 1;
+.name {
+  display: flex;
+  align-items: center;
+  font-size: $h3;
+  font-weight: $b;
+  cursor: pointer;
+
+  span[role="img"] {
+    display: none;
+    margin-left: $g-xxs;
+  }
+}
+
+.link {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+
+  button {
     display: flex;
     align-items: center;
-  }
-
-  .name {
-    font-size: $h3;
+    background: $c-dark;
+    color: $c-light;
+    font-size: $h5;
     font-weight: $b;
-    cursor: pointer;
+    padding: $g-xs $g-s;
+    border-radius: $r;
+    transition: color $de;
 
-    span[role="img"] {
-      margin-left: $g-xxs;
+    &:hover {
+      color: $c-main;
     }
-  }
 
-  .link {
-    justify-content: flex-end;
-
-    button {
-      display: flex;
-      align-items: center;
-      background: $c-dark;
-      color: $c-light;
-      font-size: $h5;
-      font-weight: $b;
-      padding: $g-xs $g-s;
-      border-radius: $r;
-
-      svg {
-        width: $h3;
-        margin-left: $g-xxs;
-      }
+    svg {
+      display: none;
+      width: $h3;
+      margin-left: $g-xxs;
     }
   }
 }
 
 // Responsive
+
+@media only screen and (min-width: 360px) {
+  .name {
+    span[role="img"] {
+      display: block;
+    }
+  }
+
+  .link {
+    button {
+      svg {
+        display: block;
+      }
+    }
+  }
+}
 
 @media only screen and (min-width: 1024px) {
   .topbar {

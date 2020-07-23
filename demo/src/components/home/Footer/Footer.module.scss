@@ -3,7 +3,8 @@
 .footer {
   font-size: $h3;
   text-align: center;
-  margin: $g-l 0;
+  margin: $g-m 0;
+  @include no-select;
 
   .bold {
     font-weight: $b;

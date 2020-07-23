@@ -3,7 +3,9 @@
 // Common
 
 .container {
+  z-index: 100;
   background: rgba($c-dark, 0.15);
+  @include no-select;
 }
 
 // Modal
@@ -19,7 +21,7 @@
 // Dialog
 
 .dialog {
-  width: 230px;
+  min-width: 250px;
   background: $c-light;
   border-radius: $r;
   box-shadow: $s-modal;
@@ -27,7 +29,7 @@
 }
 
 .content {
-  padding: $g-m;
+  padding: $g-l;
   text-align: center;
 }
 

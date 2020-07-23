@@ -4,6 +4,10 @@
 
 Open modals and dialogs with ease! 🚀 FusionUI is an **unopinionated** and minimalist library to power-up your UI.
 
+## **Demo with Examples**
+
+[ozanbolel.github.io/react-fusionui](https://ozanbolel.github.io/react-fusionui)
+
 ## **Installation**
 
 ```bash
@@ -21,7 +25,7 @@ import React from "react";
 import { FusionContainer, useModal } from "react-fusionui";
 
 const Modal = ({ isAnimationDone, isClosing, closeModal }) => {
-  return <h1>Modal</h1>;
+  return <h2>Modal</h2>;
 };
 
 const Home = () => {
@@ -30,22 +34,20 @@ const Home = () => {
   return <button onClick={() => modal(Modal)}>Open Modal</button>;
 };
 
-export default function App() {
+const MyApp = () => {
   return (
     <FusionContainer>
       <Home />
     </FusionContainer>
   );
-}
+};
+
+export default MyApp;
 ```
 
 > You need to wrap your app within `FusionContainer`.
 
 > FusionUI passes `isAnimationDone`, `isClosing` and `closeModal` props to your modal component.
-
-## **Demo with Examples**
-
-[ozanbolel.github.io/react-fusionui](https://ozanbolel.github.io/react-fusionui)
 
 ## **Theming**
 
@@ -54,7 +56,7 @@ import React from "react";
 import { FusionContainer } from "react-fusionui";
 import css from "./App.module.css";
 
-export default function App() {
+const MyApp = () => {
   return (
     <FusionContainer
       modalClassNames={{
@@ -71,10 +73,12 @@ export default function App() {
         highlight: css.highlight
       }}
     >
-      <Home />
+      ...
     </FusionContainer>
   );
-}
+};
+
+export default MyApp;
 ```
 
 ## **API**
