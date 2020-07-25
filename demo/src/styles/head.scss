@@ -17,7 +17,7 @@ $h5: 0.875em;
 
 $c-dark: #1b262c;
 $c-light: #f9f9f9;
-$c-light-a: #f0f0f0;
+$c-light-a: #e9e9e9;
 $c-main: #fbd46d;
 $c-divider: #ece8d9;
 
@@ -38,9 +38,8 @@ $r-100: 100px;
 
 // Shadow
 
-$s-box: 0 10px 30px rgba($c-dark, 0.08);
-$s-button: 0 10px 30px rgba($c-dark, 0.08);
-$s-modal: 0 15px 30px rgba($c-dark, 0.08);
+$s-button: 0 5px 15px rgba($c-dark, 0.08);
+$s-overlay: 0 10px 30px rgba($c-dark, 0.08);
 
 // Easing
 

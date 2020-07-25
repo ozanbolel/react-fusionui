@@ -1,14 +1,35 @@
 import * as React from "react";
-import { useFusionContext } from "../../utils";
-import { motion } from "framer-motion";
+import { useFusionContext, animate, sliceFloat } from "../../utils";
 import { IDialogObject, ActionType } from "../../types";
-import { containerStyles, containerVariants, dialogVariants } from "./Dialog.style";
+import { containerStyles, dialogStyles } from "./Dialog.style";
 
 export const Dialog: React.FC<IDialogObject> = ({ id, content, actions, config }) => {
   const { state, dispatch } = useFusionContext();
+  const refContainer = React.useRef<HTMLDivElement>(null);
+  const refDialog = React.useRef<HTMLDivElement>(null);
+
+  React.useEffect(() => {
+    const container = refContainer.current;
+    const dialog = refDialog.current;
+
+    if (container && dialog) {
+      animate((value) => (container.style.opacity = value), { from: parseFloat(container.style.opacity), to: 1 });
+      animate((value) => (dialog.style.transform = `scale(${value})`), { from: sliceFloat(dialog.style.transform), to: 1 });
+    }
+  }, []);
 
   const closeDialog = () => {
-    dispatch({ type: ActionType.REMOVE_DIALOG, payload: id });
+    const container = refContainer.current;
+    const dialog = refDialog.current;
+
+    if (container && dialog) {
+      animate((value) => (container.style.opacity = value), { from: parseFloat(container.style.opacity), to: 0 });
+      animate((value) => (dialog.style.transform = `scale(${value})`), {
+        from: sliceFloat(dialog.style.transform),
+        to: 0,
+        onRest: () => dispatch({ type: ActionType.REMOVE_DIALOG, payload: id })
+      });
+    }
   };
 
   const closeIfContainer = (e: React.MouseEvent) => {
@@ -23,17 +44,14 @@ export const Dialog: React.FC<IDialogObject> = ({ id, content, actions, config }
   };
 
   return (
-    <motion.div
+    <div
+      ref={refContainer}
       className={state.dialogClassNames?.container}
       style={{ ...containerStyles, cursor: config?.autoclose ? "pointer" : undefined }}
       onClick={config?.autoclose ? (e) => closeIfContainer(e) : undefined}
       data-autoclose={config?.autoclose}
-      variants={containerVariants}
-      initial="initial"
-      animate="animate"
-      exit="exit"
     >
-      <motion.div className={state.dialogClassNames?.dialog} style={{ cursor: "default" }} variants={dialogVariants}>
+      <div ref={refDialog} className={state.dialogClassNames?.dialog} style={dialogStyles}>
         <div className={state.dialogClassNames?.content}>{content}</div>
 
         <div className={state.dialogClassNames?.actionContainer}>
@@ -47,7 +65,7 @@ export const Dialog: React.FC<IDialogObject> = ({ id, content, actions, config }
             </button>
           ))}
         </div>
-      </motion.div>
-    </motion.div>
+      </div>
+    </div>
   );
 };

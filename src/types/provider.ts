@@ -1,3 +1,4 @@
+import * as React from "react";
 import { IModalObject } from "./modal";
 import { IFusionContainerProps } from "./container";
 import { IDialogObject } from "./dialog";

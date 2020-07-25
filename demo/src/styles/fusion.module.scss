@@ -14,7 +14,7 @@
   background: $c-light;
   padding: $g-m;
   border-radius: $r;
-  box-shadow: $s-modal;
+  box-shadow: $s-overlay;
   overflow: hidden;
 }
 
@@ -24,7 +24,7 @@
   min-width: 250px;
   background: $c-light;
   border-radius: $r;
-  box-shadow: $s-modal;
+  box-shadow: $s-overlay;
   overflow: hidden;
 }
 

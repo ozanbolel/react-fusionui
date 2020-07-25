@@ -1,23 +1,45 @@
 import * as React from "react";
-import { useFusionContext } from "../../utils";
-import { motion } from "framer-motion";
+import { useFusionContext, animate, sliceFloat } from "../../utils";
 import { IModalObject, ActionType } from "../../types";
-import { containerStyles, containerVariants, modalVariants } from "./Modal.style";
+import { containerStyles, modalStyles } from "./Modal.style";
 
 export const Modal: React.FC<IModalObject> = ({ id, Component, config }) => {
   const [isAnimationDone, setIsAnimationDone] = React.useState(false);
   const [isClosing, setIsClosing] = React.useState(false);
   const { state, dispatch } = useFusionContext();
+  const refContainer = React.useRef<HTMLDivElement>(null);
+  const refModal = React.useRef<HTMLDivElement>(null);
 
   React.useEffect(() => {
-    setTimeout(() => {
-      setIsAnimationDone(true);
-    }, 400);
+    const container = refContainer.current;
+    const modal = refModal.current;
+
+    if (container && modal) {
+      animate((value) => (container.style.opacity = value), { from: parseFloat(container.style.opacity), to: 1 });
+      animate((value) => (modal.style.transform = `scale(${value})`), {
+        from: sliceFloat(modal.style.transform),
+        to: 1,
+        onRest: () => setIsAnimationDone(true)
+      });
+    }
   }, []);
 
   const closeModal = () => {
-    setIsClosing(true);
-    dispatch({ type: ActionType.REMOVE_MODAL, payload: id });
+    if (isAnimationDone) {
+      setIsClosing(true);
+
+      const container = refContainer.current;
+      const modal = refModal.current;
+
+      if (container && modal) {
+        animate((value) => (container.style.opacity = value), { from: parseFloat(container.style.opacity), to: 0 });
+        animate((value) => (modal.style.transform = `scale(${value})`), {
+          from: sliceFloat(modal.style.transform),
+          to: 0,
+          onRest: () => dispatch({ type: ActionType.REMOVE_MODAL, payload: id })
+        });
+      }
+    }
   };
 
   const closeIfContainer = (e: React.MouseEvent) => {
@@ -27,24 +49,21 @@ export const Modal: React.FC<IModalObject> = ({ id, Component, config }) => {
   };
 
   return (
-    <motion.div
+    <div
+      ref={refContainer}
       className={state.modalClassNames?.container}
       style={{ ...containerStyles, cursor: config?.autoclose ? "pointer" : undefined }}
       onClick={config?.autoclose ? (e) => closeIfContainer(e) : undefined}
       data-autoclose={config?.autoclose}
-      variants={containerVariants}
-      initial="initial"
-      animate="animate"
-      exit="exit"
     >
-      <motion.div className={state.modalClassNames?.modal} style={{ cursor: "default" }} variants={modalVariants}>
+      <div ref={refModal} className={state.modalClassNames?.modal} style={modalStyles}>
         {React.useMemo(
           () => (
             <Component {...{ closeModal, isAnimationDone, isClosing, ...config?.props }} />
           ),
           [closeModal, isAnimationDone, isClosing]
         )}
-      </motion.div>
-    </motion.div>
+      </div>
+    </div>
   );
 };

@@ -1,7 +1,7 @@
 import * as React from "react";
-import { Variants } from "framer-motion";
 
 export const containerStyles: React.CSSProperties = {
+  opacity: 0,
   position: "fixed",
   top: 0,
   left: 0,
@@ -12,14 +12,7 @@ export const containerStyles: React.CSSProperties = {
   height: "calc(var(--fusion-vh, 1vh) * 100)"
 };
 
-export const containerVariants: Variants = {
-  initial: { opacity: 0 },
-  animate: { opacity: 1, transition: { type: "tween", duration: 0.4 } },
-  exit: { opacity: 0, transition: { type: "tween", duration: 0.4 } }
-};
-
-export const modalVariants: Variants = {
-  initial: { scale: 0.25 },
-  animate: { scale: 1, transition: { type: "tween", duration: 0.4 } },
-  exit: { scale: 0, transition: { type: "tween", duration: 0.4 } }
+export const modalStyles: React.CSSProperties = {
+  transform: "scale(0.25)",
+  cursor: "default"
 };
