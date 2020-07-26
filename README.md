@@ -1,6 +1,6 @@
 ## React FusionUI ☢️
 
-[![npm](https://img.shields.io/npm/v/react-fusionui.svg)](https://www.npmjs.com/package/react-fusionui) [![npm downloads](https://img.shields.io/npm/dt/react-fusionui.svg)](https://www.npmjs.com/package/react-fusionui)
+[![npm](https://img.shields.io/npm/v/react-fusionui.svg)](https://www.npmjs.com/package/react-fusionui) [![npm downloads](https://img.shields.io/npm/dt/react-fusionui.svg)](https://www.npmjs.com/package/react-fusionui) ![npm bundle size](https://img.shields.io/bundlephobia/minzip/react-fusionui)
 
 Open modals and dialogs with ease! 🚀 FusionUI is an **unopinionated** and minimalist library to power-up your UI.
 
